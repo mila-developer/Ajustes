@@ -11,7 +11,21 @@ struct ContentView: View {
     @Binding var document: AjustesDocument
 
     var body: some View {
-        TextEditor(text: $document.text)
+        
+        Form {
+            HStack {
+                Image(systemName: "airplane")
+                Text("Airplane Mode")
+            }
+            HStack {
+                Image(systemName: "wifi")
+                Text("Wi-Fi")
+                Spacer()
+                Text("MEO-00A000")
+                    .font(.callout)
+                    .foregroundColor(.gray)
+            }
+        }
     }
 }
 
